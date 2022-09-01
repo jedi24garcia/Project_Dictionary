@@ -18,7 +18,7 @@ Label(root, text="Dots", font=(
   "Poppins, 20 bold"), fg="Orange").pack(pady=20)
 
 frame = Frame(root)
-Label(frame, text="Dot Name: ", font=("Helvetica, 15 bold")).pack(side="left")
+Label(frame, text="Enter name: ", font=("Helvetica, 15 bold")).pack(side="left")
 word = Entry(frame, font=("Helvetica, 15 bold"), width=30)
 word.pack()
 frame.pack(pady=10)
