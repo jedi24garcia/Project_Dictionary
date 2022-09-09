@@ -11,8 +11,9 @@ root = tk.Tk()
 
 root.geometry('600x400+50+50')
 
-def dict(event=None):
-  meaning.config(text=dictionary.meaning(word.get())['Noun'][0])
+def dict:
+# meaning.config(text=dictionary.meaning(word.get())['Noun'][0])
+  synonym.config(text=dictionary.synonym(word.get()))
 
 Label(root, text="Dots", font=(
   "Poppins, 20 bold"), fg="Orange").pack(pady=20)
