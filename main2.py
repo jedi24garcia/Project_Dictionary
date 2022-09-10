@@ -1,7 +1,5 @@
 #!/usr/bin/env python3
 
-#import json
-#from difflib import get_close_matches
 import tkinter as tk
 from tkinter import *
 from PyDictionary import PyDictionary
@@ -9,7 +7,11 @@ from PyDictionary import PyDictionary
 dictionary = PyDictionary()
 root = tk.Tk()
 
-root.geometry('600x400+50+50')
+root.geometry('570x500')
+root.title('Waterford')
+root.attributes('-alpha', 0.9)
+root.attributes('-topmost', 1)
+#root.iconbitmap = need to save an ".ico" file. 
 
 def dict(event=None):
   meaning.config(text=dictionary.meaning(word.get())['Noun'][0])
