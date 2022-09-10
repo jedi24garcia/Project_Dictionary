@@ -29,7 +29,6 @@ meaning = Label(frame1, text="", font=("Helvetica 10"))
 meaning.pack()
 frame1.pack(pady=10)
 
-#Button(root, text="Search", font=("Helvetica, 15 bold"), command=dict).pack()
 word.bind('<Return>', dict)
 
 root.mainloop() # runs the GUI or program
