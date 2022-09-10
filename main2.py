@@ -11,21 +11,20 @@ root = tk.Tk()
 
 root.geometry('600x400+50+50')
 
-def dict:
-# meaning.config(text=dictionary.meaning(word.get())['Noun'][0])
-  synonym.config(text=dictionary.synonym(word.get()))
+def dict(event=None):
+  meaning.config(text=dictionary.meaning(word.get())['Noun'][0])
 
-Label(root, text="Dots", font=(
+Label(root, text="Private Dictionary", font=(
   "Poppins, 20 bold"), fg="Orange").pack(pady=20)
 
 frame = Frame(root)
-Label(frame, text="Enter name: ", font=("Helvetica, 15 bold")).pack(side="left")
+Label(frame, text="Enter word: ", font=("Helvetica, 15 bold")).pack(side="left")
 word = Entry(frame, font=("Helvetica, 15 bold"), width=30)
 word.pack()
 frame.pack(pady=10)
 
 frame1 = Frame(root)
-Label(frame1, text="Meaning: ", font=("Helvetica, 10 bold")).pack(side="left")
+Label(frame1, text="Results: ", font=("Helvetica, 10 bold")).pack(side="left")
 meaning = Label(frame1, text="", font=("Helvetica 10"))
 meaning.pack()
 frame1.pack(pady=10)
