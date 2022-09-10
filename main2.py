@@ -24,7 +24,7 @@ word.pack()
 frame.pack(pady=10)
 
 frame1 = Frame(root)
-Label(frame1, text="Results: ", font=("Helvetica, 10 bold")).pack(side="left")
+Label(frame1, text="Result: ", font=("Helvetica, 10 bold")).pack(side="left")
 meaning = Label(frame1, text="", font=("Helvetica 10"))
 meaning.pack()
 frame1.pack(pady=10)
