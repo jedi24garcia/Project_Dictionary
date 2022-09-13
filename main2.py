@@ -32,17 +32,17 @@ meaning.pack(pady=10)
 frame1.pack(pady=10)
 """
 
+"""
 frame1 = Frame(root)
 Label(frame1, text="Results: ", font="Helvetica, 10 bold")
-meaning = Text(frame1, height=20, width=65) 
+meaning = Text(root, height=20, width=65) 
 meaning.pack()
 frame1.pack(pady=10)
+"""
 
 # just a sample
-"""
-my_text = Text(root, height=20, width=65, wrap=WORD)
-my_text.pack(pady=10)
-"""
+meaning = Text(root, height=20, width=65)
+meaning.pack(pady=10)
 
 word.bind('<Return>', dict)
 
