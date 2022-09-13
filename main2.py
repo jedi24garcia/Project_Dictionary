@@ -7,19 +7,9 @@ from PyDictionary import PyDictionary
 dictionary = PyDictionary()
 root = tk.Tk()
 
-class CoolThing:
-  def __init__(self, root):
-    self.root = root
-    self.root.resizable(False, False)
-    self.root.geometry('570x500')
-    self.root.title('Waterford')
-    self.root.attributes('-topmost', 1)
-
-"""
 root.geometry("570x500")
 root.title("Waterford")
 root.attributes("-topmost", 1)
-"""
 
 def dict(event=None):
   meaning.config(text=dictionary.meaning(word.get())['Noun'][0])
