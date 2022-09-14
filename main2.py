@@ -7,10 +7,11 @@ from PyDictionary import PyDictionary
 dictionary = PyDictionary()
 root = tk.Tk()
 
+root.title("Waterford")
+
 class alien:
-  def __init__(self, root):
+  def __init__ (self, root):
     self.root.geometry("570x500")
-    self.root.title("Waterford")
     self.root.attributes("-topmost", 1)
 
 def dict(event=None):
@@ -25,11 +26,8 @@ word = Entry(frame, font=("Helvetica, 15 bold"), width=10)
 word.pack()
 frame.pack(pady=10)
 
-frame1 = Frame(root)
-Label(frame1, text="Results: ", font="Helvetica, 10 bold")
-meaning = Label(frame1, height=20, width=65) 
+meaning = Label(root, height=20, width=65) 
 meaning.pack()
-frame1.pack(pady=10)
 
 word.bind('<Return>', dict)
 
