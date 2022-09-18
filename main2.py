@@ -5,8 +5,8 @@ from tkinter import *
 from PyDictionary import PyDictionary
 
 dictionary = PyDictionary()
-root = tk.Tk()
 
+root = tk.Tk()
 root.title("Waterford")
 
 class alien:
