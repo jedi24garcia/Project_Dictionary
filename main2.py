@@ -7,10 +7,11 @@ from PyDictionary import PyDictionary
 dictionary = PyDictionary()
 
 root = tk.Tk()
-root.title("Waterford")
 
-root.geometry("600x500")
+root.title("Waterford")
+root.geometry("900x600+100+100")
 root.attributes("-topmost", 1)
+root.configure(bg="black")
 
 def dict(event=None):
   meaning.config(text=dictionary.meaning(word.get())['Noun'][0])
@@ -24,10 +25,10 @@ word = Entry(frame, font=("Helvetica, 15 bold"), width=10)
 word.pack()
 frame.pack(pady=10)
 
-meaning = Label(root, height=20, width=65) 
+meaning = Label(root, height=25, width=95) 
 meaning.pack()
 
 word.bind('<Return>', dict)
 
-root.mainloop() # runs the GUI or program
+root.mainloop()
 
