@@ -9,10 +9,8 @@ dictionary = PyDictionary()
 root = tk.Tk()
 root.title("Waterford")
 
-class alien:
-  def __init__ (self, root):
-    self.root.geometry("570x500")
-    self.root.attributes("-topmost", 1)
+root.geometry("600x500")
+root.attributes("-topmost", 1)
 
 def dict(event=None):
   meaning.config(text=dictionary.meaning(word.get())['Noun'][0])
@@ -33,5 +31,3 @@ word.bind('<Return>', dict)
 
 root.mainloop() # runs the GUI or program
 
-
-# use this website for reference: https://www.geeksforgeeks.org/word-dictionary-using-tkinter/
