@@ -8,7 +8,8 @@ dictionary = PyDictionary()
 
 root = tk.Tk()
 
-root.title("Waterford")
+# This is UI
+root.title("My Personal Assistance")
 root.geometry("900x600+100+100")
 root.attributes("-topmost", 1)
 root.configure(bg="black")
