@@ -5,7 +5,6 @@ from tkinter import *
 from PyDictionary import PyDictionary
 
 dictionary = PyDictionary()
-
 root = tk.Tk()
 
 # This is UI
