@@ -13,6 +13,15 @@ root.geometry("900x600+100+100")
 root.attributes("-topmost", 1)
 root.configure(bg="black")
 
+def openNewWindow():
+  newWindow = Toplevel(master)
+  newWindow.Title("New Window")
+  newWindow.geometry("900x600+100+100")
+  newWindow.configure(bg="black")
+
+Label(NewWindow,
+      text="This is a new window").pack()
+
 def dict(event=None):
   meaning.config(text=dictionary.meaning(word.get())['Noun'][0])
 
@@ -32,4 +41,4 @@ word.bind('<Return>', dict)
 
 root.mainloop()
 
-#need to think of something to add
+#fix error for new GUI = error error error
