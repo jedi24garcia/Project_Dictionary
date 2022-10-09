@@ -6,6 +6,7 @@ from PyDictionary import PyDictionary
 
 dictionary = PyDictionary()
 root = tk.Tk()
+master = tk.Tk()
 
 # This is UI
 root.title("My Personal Assistance")
