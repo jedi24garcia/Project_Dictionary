@@ -32,3 +32,4 @@ word.bind('<Return>', dict)
 
 root.mainloop()
 
+#need to think of something to add
