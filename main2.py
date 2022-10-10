@@ -44,4 +44,4 @@ word.bind('<Return>', dict)
 
 root.mainloop()
 
-#will continue later on. will now focus on new project. 
+#Will continue later on. Will now focus on new project. 
