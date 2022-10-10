@@ -6,7 +6,7 @@ from PyDictionary import PyDictionary
 
 dictionary = PyDictionary()
 root = tk.Tk()
-master = tk.Tk()
+#master = tk.Tk()
 
 # This is UI
 root.title("My Personal Assistance")
@@ -14,6 +14,7 @@ root.geometry("900x600+100+100")
 root.attributes("-topmost", 1)
 root.configure(bg="black")
 
+"""
 def openNewWindow():
   newWindow = Toplevel(master)
   newWindow.Title("New Window")
@@ -22,6 +23,7 @@ def openNewWindow():
 
 Label(NewWindow,
       text="This is a new window").pack()
+"""
 
 def dict(event=None):
   meaning.config(text=dictionary.meaning(word.get())['Noun'][0])
@@ -42,4 +44,4 @@ word.bind('<Return>', dict)
 
 root.mainloop()
 
-#fix error for new GUI = error error error
+#will continue later on. will now focus on new project 
