@@ -3,27 +3,16 @@
 import tkinter as tk
 from tkinter import *
 from PyDictionary import PyDictionary
+import json
 
 dictionary = PyDictionary()
 root = tk.Tk()
-#master = tk.Tk()
 
-# This is UI
 root.title("My Personal Assistance")
 root.geometry("900x600+100+100")
 root.attributes("-topmost", 1)
 root.configure(bg="black")
 
-"""
-def openNewWindow():
-  newWindow = Toplevel(master)
-  newWindow.Title("New Window")
-  newWindow.geometry("900x600+100+100")
-  newWindow.configure(bg="black")
-
-Label(NewWindow,
-      text="This is a new window").pack()
-"""
 
 def dict(event=None):
   meaning.config(text=dictionary.meaning(word.get())['Noun'][0])
@@ -43,5 +32,4 @@ meaning.pack()
 word.bind('<Return>', dict)
 
 root.mainloop()
-
-#Will continue later on. Will now focus on new project. 
+ 
