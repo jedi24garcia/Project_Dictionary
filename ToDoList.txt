@@ -2,4 +2,5 @@
 
 To Do List:
 
-a) Will need to figure out how to extract data from json file with tkinter
+a) figure out how to extract data from json file with tkinter
+b) create new windows containing information from json file
