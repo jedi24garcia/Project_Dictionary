@@ -8,7 +8,7 @@ import json
 dictionary = PyDictionary()
 window  = tk.Tk()
 
-window.title("Waterford Security")
+window.title("Personal Dictionary")
 window.geometry("900x600+100+100")
 window.attributes("-topmost", 1)
 window.configure(bg="black")
@@ -17,7 +17,7 @@ window.configure(bg="black")
 def dict(event=None):
   meaning.config(text=dictionary.meaning(word.get())['Noun'][0])
 
-Label(window, text="Waterford Assistant", font=(
+Label(window, text="A.I dictionary", font=(
   "Poppins, 20 bold"), fg="Orange").pack(pady=20)
 
 frame = Frame(window)
