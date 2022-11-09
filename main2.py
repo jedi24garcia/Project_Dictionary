@@ -11,7 +11,7 @@ window  = tk.Tk()
 window.title("Personal Dictionary")
 window.geometry("900x600+100+100")
 window.attributes("-topmost", 1)
-window.configure(bg="black")
+window.configure(bg="darkblue")
 
 
 def dict(event=None):
@@ -27,6 +27,7 @@ word.pack()
 frame.pack(pady=10)
 
 meaning = Label(window, height=25, width=95) 
+meaning.configure(bg="black")
 meaning.pack()
 
 word.bind('<Return>', dict)
