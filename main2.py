@@ -11,7 +11,7 @@ window  = tk.Tk()
 window.title("Personal Dictionary")
 window.geometry("900x600+100+100")
 window.attributes("-topmost", 1)
-window.configure(bg="darkblue")
+window.configure(bg="darkgrey")
 
 
 def dict(event=None):
