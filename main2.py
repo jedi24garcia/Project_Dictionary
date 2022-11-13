@@ -3,19 +3,46 @@
 import tkinter as tk
 from tkinter import *
 from PyDictionary import PyDictionary
-import json
+import speech_recognition as sr
+import pyttsx3
+# import time
+# import datetime
+# from ecapture import ecapture as ec
+# import requests
+# import subprocess
+# import webbrowser
+# import wikipedia
+# import wolframalpha
+# import os
+
+print("Welcome!")
 
 dictionary = PyDictionary()
 window  = tk.Tk()
+engine = pyttsx3.init()
 
+# engine.setProperty("voice", "voice[1].id")
+
+# This is UI
 window.title("Personal Dictionary")
 window.geometry("900x600+100+100")
 window.attributes("-topmost", 1)
 window.configure(bg="darkgrey")
 
-
 def dict(event=None):
   meaning.config(text=dictionary.meaning(word.get())['Noun'][0])
+
+def speak(text):
+  engine.say(text)
+  engine.runAndWait()
+
+def takeCommand():
+  r=sr.Recognizer()
+  with sr.Microphone() as source:
+    print("Listening...")
+    audio=r.Listen(source)
+
+speak("Hello Motherfucker")
 
 Label(window, text="System Dictionary", font=("Helvitica, 40 bold"), fg="Black").pack(pady=20)
 
