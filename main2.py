@@ -15,13 +15,16 @@ import pyttsx3
 # import wolframalpha
 # import os
 
-print("Welcome!")
+# print("Welcome!")
 
 dictionary = PyDictionary()
-window  = tk.Tk()
+window = tk.Tk()
 engine = pyttsx3.init()
 
-# engine.setProperty("voice", "voice[1].id")
+"""
+voices = engine.getProperty("voices")
+engine.setProperty("voice", "voices[1].id")
+"""
 
 # This is UI
 window.title("Personal Dictionary")
@@ -32,17 +35,24 @@ window.configure(bg="darkgrey")
 def dict(event=None):
   meaning.config(text=dictionary.meaning(word.get())['Noun'][0])
 
+"""
 def speak(text):
   engine.say(text)
   engine.runAndWait()
+"""
 
-def takeCommand():
+# will need to figure this out
+
+"""
+# audio
+odef takeCommand():
   r=sr.Recognizer()
   with sr.Microphone() as source:
-    print("Listening...")
+  # print("Listening...")
     audio=r.Listen(source)
+"""
 
-speak("Hello Motherfucker")
+# speak("Welcome!")
 
 Label(window, text="System Dictionary", font=("Helvitica, 40 bold"), fg="Black").pack(pady=20)
 
@@ -57,6 +67,12 @@ meaning.configure(bg="black")
 meaning.pack()
 
 word.bind('<Return>', dict)
+
+def speak(text):
+  engine.say(text)
+  engine.runAndWait()
+
+speak("Welcome")
 
 window.mainloop()
  
