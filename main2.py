@@ -21,11 +21,6 @@ dictionary = PyDictionary()
 window = tk.Tk()
 engine = pyttsx3.init()
 
-"""
-voices = engine.getProperty("voices")
-engine.setProperty("voice", "voices[1].id")
-"""
-
 # This is UI
 window.title("Personal Dictionary")
 window.geometry("900x600+100+100")
