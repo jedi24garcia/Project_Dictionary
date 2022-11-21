@@ -30,17 +30,11 @@ window.configure(bg="darkgrey")
 def dict(event=None):
   meaning.config(text=dictionary.meaning(word.get())['Noun'][0])
 
-"""
-def speak(text):
-  engine.say(text)
-  engine.runAndWait()
-"""
-
 # will need to figure this out
 
 """
 # audio
-odef takeCommand():
+def takeCommand():
   r=sr.Recognizer()
   with sr.Microphone() as source:
   # print("Listening...")
