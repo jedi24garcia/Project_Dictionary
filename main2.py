@@ -3,11 +3,9 @@
 import tkinter as tk
 from tkinter import *
 from PyDictionary import PyDictionary
-import pyttsx3
 
 dictionary = PyDictionary()
 window = tk.Tk()
-engine = pyttsx3.init()
 
 # This is UI
 window.title("Personal Dictionary")
