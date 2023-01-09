@@ -17,13 +17,11 @@ window.configure(bg="black")
 def dict(event=None):
   meaning.config(text=dictionary.meaning(word.get())['Noun'][0])
 
-"""
-def NewWindow():
-  NewWindow = Toplevel(master)
-  NewWindow.title("New")
-  NewWindow.geometry("900x600+100+100")
-  Label (NewWindow, text="This is a new window").pack()
-"""
+class NewWindow():
+  def __init__(self, window):
+    self.window
+    self.title("New window")
+    self.geometry("900x600+100+100")
 
 Label(window, text="System Dictionary", font=("Helvitica, 40 bold"), fg="Black").pack(pady=20)
 
@@ -36,14 +34,6 @@ frame.pack(pady=10)
 meaning = Label(window, height=25, width=95) 
 meaning.configure(bg="black")
 meaning.pack()
-
-class NewWindow():
-  def __init__(self, window):
-    self.window
-    self.title("New window")
-    seld.geometry("900x600+100+100")
-  
-  
 btn = Button(master, text="Click to open new window", command = NewWindow)
 btn.pack(pady = 10)
 
