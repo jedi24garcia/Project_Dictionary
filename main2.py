@@ -17,13 +17,17 @@ window.configure(bg="black")
 def dict(event=None):
   meaning.config(text=dictionary.meaning(word.get())['Noun'][0])
 
+"""
 class NewWindow():
-  def __init__(self, window):
-    self.window
+  def __init__(self, new_window):
+    self.new_window
     self.title("New window")
     self.geometry("900x600+100+100")
+    label = Label(self, text = "This is a new window")
+    label.pack()
+"""
 
-Label(window, text="System Dictionary", font=("Helvitica, 40 bold"), fg="Black").pack(pady=20)
+Label(window, text="System Dictionary", font=("Helvitica, 40 bold"), fg="Red").pack(pady=20)
 
 frame = Frame(window)
 Label(frame, text="Enter word: ", font=("Helvetica, 15 bold")).pack(side="left")
@@ -34,8 +38,8 @@ frame.pack(pady=10)
 meaning = Label(window, height=25, width=95) 
 meaning.configure(bg="black")
 meaning.pack()
-btn = Button(master, text="Click to open new window", command = NewWindow)
-btn.pack(pady = 10)
+# btn = Button(window, text="Click to open new window", command = NewWindow)
+# btn.pack(pady = 10)
 
 word.bind('<Return>', dict)
 
