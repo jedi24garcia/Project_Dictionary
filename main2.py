@@ -20,9 +20,10 @@ def dict(event=None):
 """
 class NewWindow():
   def __init__(self, new_window):
-    self.new_window
+    self.new_window=new.window
     self.title("New window")
     self.geometry("900x600+100+100")
+    self.
     label = Label(self, text = "This is a new window")
     label.pack()
 """
