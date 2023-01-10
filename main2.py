@@ -4,6 +4,8 @@ import tkinter as tk
 from tkinter import *
 # from tkinter.ttk import *
 from PyDictionary import PyDictionary
+  
+userinput = input("Enter password: ") 
 
 dictionary = PyDictionary()
 window = tk.Tk()
@@ -14,9 +16,9 @@ window.geometry("900x600+100+100")
 window.attributes("-topmost", 1)
 window.configure(bg="black")
 
+
 def dict(event=None):
   meaning.config(text=dictionary.meaning(word.get())['Noun'][0])
-
 
 def newWindow():
   newWindow = Toplevel(window) 
