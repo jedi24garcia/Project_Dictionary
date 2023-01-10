@@ -2,7 +2,7 @@
 
 import tkinter as tk
 from tkinter import *
-from tkinter.ttk import *
+# from tkinter.ttk import *
 from PyDictionary import PyDictionary
 
 dictionary = PyDictionary()
@@ -17,6 +17,14 @@ window.configure(bg="black")
 def dict(event=None):
   meaning.config(text=dictionary.meaning(word.get())['Noun'][0])
 
+
+def newWindow():
+  newWindow = Toplevel(window) 
+  newWindow.title("New Window")
+  newWindow.geometry("900x600+100+100") 
+  Label(newWindow, text = "This is a new window").pack()
+
+"""
 class NewWindow(Toplevel):
   def __init__(self, window = None):
     super().__init__(window = window)
@@ -24,6 +32,7 @@ class NewWindow(Toplevel):
     self.geometry("900x600+100+100")
     label = Label(self, text = "This is a new window")
     label.pack()
+"""
 
 Label(window, text="System Dictionary", font=("Helvitica, 40 bold"), fg="Red").pack(pady=20)
 
@@ -41,8 +50,8 @@ frame.pack(pady=10)
 meaning = Label(window, height=25, width=95) 
 meaning.configure(bg="black")
 meaning.pack()
-btn = Button(window, text="Click to open new window")
-btn.bind("<Button>", lambda e: NewWindow(window))
+btn = Button(window, text="Click to open new window", command = newWindow)
+# btn.bind("<Button>", lambda e: newWindow(window))
 btn.pack(pady = 10)
 
 word.bind('<Return>', dict)
