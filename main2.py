@@ -9,9 +9,7 @@ password = "admiral"
 
 while True:
   userinput = input("Enter password: ") 
-  if userinput in password:
-    print("Thanks")
-  elif userinput == "end":
+  if userinput == password:
     break
   else:   
     print("Wrong password, please try again: ")
