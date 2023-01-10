@@ -4,9 +4,17 @@ import tkinter as tk
 from tkinter import *
 # from tkinter.ttk import *
 from PyDictionary import PyDictionary
-  
-userinput = input("Enter password: ") 
 
+password = "admiral"
+
+userinput = input("Enter password: ") 
+if userinput == (password):
+  print("Thanks")
+else:
+  print("Try again: ")
+if userinput != password:
+  print("Wrong password")
+  
 dictionary = PyDictionary()
 window = tk.Tk()
 
@@ -26,22 +34,7 @@ def newWindow():
   newWindow.geometry("900x600+100+100") 
   Label(newWindow, text = "This is a new window").pack()
 
-"""
-class NewWindow(Toplevel):
-  def __init__(self, window = None):
-    super().__init__(window = window)
-    self.title("New window")
-    self.geometry("900x600+100+100")
-    label = Label(self, text = "This is a new window")
-    label.pack()
-"""
-
 Label(window, text="System Dictionary", font=("Helvitica, 40 bold"), fg="Red").pack(pady=20)
-
-'''
-label = Label(window, text = "System Dictionary")
-label.pack(side = TOP, pady = 10)
-'''
 
 frame = Frame(window)
 Label(frame, text="Enter word: ", font=("Helvetica, 15 bold")).pack(side="left")
@@ -53,7 +46,6 @@ meaning = Label(window, height=25, width=95)
 meaning.configure(bg="black")
 meaning.pack()
 btn = Button(window, text="Click to open new window", command = newWindow)
-# btn.bind("<Button>", lambda e: newWindow(window))
 btn.pack(pady = 10)
 
 word.bind('<Return>', dict)
