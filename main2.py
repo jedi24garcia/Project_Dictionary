@@ -7,23 +7,22 @@ from PyDictionary import PyDictionary
 
 password = "admiral"
 
-userinput = input("Enter password: ") 
-if userinput == (password):
-  print("Thanks")
-else:
-  print("Try again: ")
-if userinput != password:
-  print("Wrong password")
+while True:
+  userinput = input("Enter password: ") 
+  if userinput in password:
+    print("Thanks")
+  elif userinput == "end":
+    break
+  else:   
+    print("Wrong password, please try again: ")
   
 dictionary = PyDictionary()
 window = tk.Tk()
 
-# This is UI
 window.title("Personal Dictionary")
 window.geometry("900x600+100+100")
 window.attributes("-topmost", 1)
 window.configure(bg="black")
-
 
 def dict(event=None):
   meaning.config(text=dictionary.meaning(word.get())['Noun'][0])
