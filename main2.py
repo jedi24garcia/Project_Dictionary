@@ -31,7 +31,7 @@ def newWindow():
   newWindow.geometry("900x600+100+100") 
   Label(newWindow, text = "This is a new window").pack()
 
-Label(window, text="System Dictionary", font=("Helvitica, 40 bold"), fg="Red").pack(pady=20)
+Label(window, text="System Dictionary", font=("Helvitica, 40 bold"), fg="Blue").pack(pady=20)
 
 frame = Frame(window)
 Label(frame, text="Enter word: ", font=("Helvetica, 15 bold")).pack(side="left")
