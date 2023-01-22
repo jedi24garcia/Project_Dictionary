@@ -28,7 +28,8 @@ def dict(event=None):
 def newWindow():
   newWindow = Toplevel(window) 
   newWindow.title("New Window")
-  newWindow.geometry("900x600+100+100") 
+  newWindow.geometry("900x600+100+100")
+  newWindow.attributes("-topmost", 1)
   Label(newWindow, text = "This is a new window").pack()
 
 Label(window, text="System Dictionary", font=("Helvitica, 40 bold"), fg="Blue").pack(pady=20)
