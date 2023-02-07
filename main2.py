@@ -2,7 +2,6 @@
 
 import tkinter as tk
 from tkinter import *
-# from tkinter.ttk import *
 from PyDictionary import PyDictionary
 
 password = "admiral"
