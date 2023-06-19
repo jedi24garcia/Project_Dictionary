@@ -1,6 +1,0 @@
-
-
-To Do List:
-
-a) figure out how to extract data from json file with tkinter
-b) create new windows containing information from json file
