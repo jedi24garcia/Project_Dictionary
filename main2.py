@@ -31,14 +31,6 @@ def newWindow():
   newWindow.attributes("-topmost", 1)
   Label(newWindow, text = "This is a new window").pack()
 
-"""
-  frame1 = Frame(window)
-  Label(frame1, text="Enter something: ", font=("Helvica, 15 bold")).pack(side="left")
-  word = Entry(frame1, font=("Helvetica, 15 bold"), width=10)
-  word.pack()
-  frame1.pack(pady=10)
-"""
-
 Label(window, text="System Dictionary", font=("Helvitica, 40 bold"), fg="Blue").pack(pady=20)
 
 frame = Frame(window)
